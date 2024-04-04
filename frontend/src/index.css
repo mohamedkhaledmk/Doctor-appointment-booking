@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  section {
+    @apply py-[75px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] mx-auto px-5;
+  }
+  .btn {
+    @apply bg-primaryColor py-[10px] px-[35px] rounded-[50px] text-white mt-[5%] font-[600];
+  }
+  .heading {
+    @apply text-[44px] leading-[54px] font-[700] text-headingColor;
+  }
+  .text_para {
+    @apply text-[18px] leading-[30px] font-[400] text-textColor;
+  }
+  .hero_section {
+    @apply bg-[url('./assets/images/hero-bg.png')]  bg-center bg-no-repeat bg-cover w-full;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+}
