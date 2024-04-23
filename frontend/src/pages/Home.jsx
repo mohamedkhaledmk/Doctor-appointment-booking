@@ -5,6 +5,7 @@ import heroImg03 from "./../assets/images/hero-img03.png";
 import icon01 from "./../assets/images/icon01.png";
 import icon02 from "./../assets/images/icon02.png";
 import icon03 from "./../assets/images/icon03.png";
+import featureImg from "./../assets/images/feature-img.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
@@ -182,6 +183,37 @@ const Home = () => {
         </section>
         <ServicesList />
         {/*  =============== Services Section End  =============== */}
+        {/*  =============== Feature Section  =============== */}
+        <section>
+          <div className="container w-[70%]">
+            <div className="flex items-center justify-between  flex-col lg:flex-row">
+              <div className="xl:w-[670px] ">
+                <h2 className="heading">
+                  Get virtual treatment <br /> anytime
+                </h2>
+                <ul className="pl-4 py-4">
+                  <li className="text_para my-2">
+                    1. Shedule the appointment directly
+                  </li>
+                  <li className="text_para my-2">
+                    2. Search for your physician here, and contact their office
+                  </li>
+                  <li className="text_para my-2">
+                    3. View our physicians who are accepting new patients, use
+                    the online scheduling tool to select an appoitment time
+                  </li>
+                </ul>
+                <Link to={`/`}>
+                  <button className="btn">Learn More</button>
+                </Link>
+              </div>
+              <div className="xl:w-[770px] relative z-10 flex justify-end mt-[50px] lg:mt[0]">
+                <img src={featureImg} alt="featureImg" className="w-3/4" />
+              </div>
+            </div>
+          </div>{" "}
+        </section>
+        {/*  =============== Feature Section End  =============== */}
       </>
     </>
   );
