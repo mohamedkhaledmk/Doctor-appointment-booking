@@ -1,4 +1,3 @@
-import React from "react";
 import heroImg01 from "./../assets/images/hero-img01.png";
 import heroImg02 from "./../assets/images/hero-img02.png";
 import heroImg03 from "./../assets/images/hero-img03.png";
@@ -6,10 +5,13 @@ import icon01 from "./../assets/images/icon01.png";
 import icon02 from "./../assets/images/icon02.png";
 import icon03 from "./../assets/images/icon03.png";
 import featureImg from "./../assets/images/feature-img.png";
+import videoIcon from "./../assets/images/video-icon.png";
+import avatar from "./../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
+import DoctorList from "../components/Doctors/DoctorList";
 
 const Home = () => {
   return (
@@ -207,13 +209,58 @@ const Home = () => {
                   <button className="btn">Learn More</button>
                 </Link>
               </div>
+              {/* image */}
               <div className="xl:w-[770px] relative z-10 flex justify-end mt-[50px] lg:mt[0]">
                 <img src={featureImg} alt="featureImg" className="w-3/4" />
+                <div className="w-[150]px lg:w-[250px] bg-white p-2 pb-3 z-20 absolute bottom-[50px] left-0 md:bottom-[100px] rounded-[10px]">
+                  {" "}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-[6px] lg:gap-3 ">
+                      <p className="font-[700] text-[10px] lg:text-[14px] text-headingColor">
+                        Tue, 24
+                      </p>
+                      <p className="font-[400] text-[10px] lg:text-[14px] text-textColor">
+                        10:00
+                      </p>
+                    </div>
+                    <span className="w-5 h-5 bg-yellowColor flex items-center justify-center lg:w-[34px] lg:h-[34px] rounded py-1 px-[6px] lg:py-3 lg:px-[9px]">
+                      <img src={videoIcon} alt="video" />
+                    </span>
+                  </div>
+                  <div
+                    className="w-[75px] lg:w-[125px] lg:w- bg-[#CCF0F3] text-center text-irisBlueColor font-[500] rounded-full mt-2 py-1 px-2 
+                  lg:px-[10px] lg:py-[6px] text-[10px] lg:text-[14px]
+                  "
+                  >
+                    {" "}
+                    Consultation{" "}
+                  </div>
+                  <div className="flex items-center mt-2 gap-[6px] lg:mt-[18px]">
+                    <img src={avatar} alt="doctor-avatar" />
+                    <h4 className="text-textColor leading-3 font-[700] text-[10px] lg:text-[14px]">
+                      Wayne Collins
+                    </h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>{" "}
         </section>
         {/*  =============== Feature Section End  =============== */}
+        {/*  =============== Our great doctors  =============== */}
+        <section>
+          <div className="container">
+            <div className="mx-auto xl:w-[470px]">
+              <h2 className="text-center heading"> Our great doctors </h2>
+              <p className="text-center text-para">
+                World-class care for everyone. Our health system offers
+                unmatched, expert health care.
+              </p>
+            </div>
+            <DoctorList />
+          </div>
+        </section>
+        {/*  =============== Our great doctors End  =============== */}
       </>
     </>
   );
