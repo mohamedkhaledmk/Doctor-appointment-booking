@@ -21,7 +21,7 @@ const Testimonial = () => {
       >
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-3">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-3">
               <img
                 className="w-[50px] h-[50px] rounded-full"
                 src={patientAvatar}
@@ -48,7 +48,7 @@ const Testimonial = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-3">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-3">
               <img
                 className="w-[50px] h-[50px] rounded-full"
                 src={patientAvatar}
@@ -75,7 +75,7 @@ const Testimonial = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-3">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-3">
               <img
                 className="w-[50px] h-[50px] rounded-full"
                 src={patientAvatar}
