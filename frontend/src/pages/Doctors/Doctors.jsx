@@ -1,6 +1,7 @@
 import React from "react";
 import { doctors } from "../../assets/data/doctors";
 import DoctorCard from "../../components/Doctors/DoctorCard";
+import Testimonial from "../../components/Testimonial/Testimonial";
 const Doctors = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const Doctors = () => {
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
           </div>
+          <Testimonial />
         </div>
       </section>
     </>
