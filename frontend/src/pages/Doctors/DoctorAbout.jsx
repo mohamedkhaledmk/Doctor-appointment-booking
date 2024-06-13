@@ -52,6 +52,44 @@ const DoctorAbout = () => {
           </li>
         </ul>
       </div>
+      <div className="mt-12 ">
+        <h3 className="text-headingColor">Experience</h3>
+        <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">
+          <li className="p-4 rounded bg-[#fff9ea]">
+            <span className="text-yellowColor text-[15px] font-semibold leading-6">
+              {formatDate("2014-10-09")}-{formatDate("2020-08-14")}
+            </span>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Sr. Surgeon
+            </p>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Dar EL-Fouad Hospital, October
+            </p>
+          </li>
+          <li className="p-4 rounded bg-[#fff9ea]">
+            <span className="text-yellowColor text-[15px] font-semibold leading-6">
+              {formatDate("2014-10-09")}-{formatDate("2020-08-14")}
+            </span>
+            <p className="text-[16px] leading-6 font-medium text-textColor">
+              Sr. Surgeon
+            </p>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Dar EL-Fouad Hospital, October
+            </p>
+          </li>
+          <li className="p-4 rounded bg-[#fff9ea]">
+            <span className="text-yellowColor text-[15px] font-semibold leading-6">
+              {formatDate("2014-10-09")}-{formatDate("2020-08-14")}
+            </span>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Sr. Surgeon
+            </p>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Dar EL-Fouad Hospital, October
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
