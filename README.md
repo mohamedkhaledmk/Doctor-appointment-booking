@@ -53,7 +53,7 @@ This project is a web application that allows patients to book appointments with
 
 1. Download the project folder.
 2. Navigate to the `frontend` folder using the terminal or command prompt: `cd frontend`
-3. Run the command `npm start` to start the frontend server.
+3. Run the command `npm run dev` to start the frontend server.
 
 
 <span style="color: blue">**Happy Coding!**</span> 😊
