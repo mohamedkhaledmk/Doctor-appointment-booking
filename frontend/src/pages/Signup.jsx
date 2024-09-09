@@ -39,6 +39,7 @@ const Signup = () => {
               <div className="mb-5">
                 {" "}
                 <input
+                  required
                   type="name"
                   name="name"
                   value={formData.name}
@@ -50,6 +51,7 @@ const Signup = () => {
               </div>
               <div className="mb-5">
                 <input
+                  required
                   type="email"
                   name="email"
                   placeholder="Enter your email"
@@ -62,6 +64,7 @@ const Signup = () => {
               <div className="mb-5">
                 {" "}
                 <input
+                  required
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -111,6 +114,7 @@ const Signup = () => {
                 </figure>
                 <div className="relative w-[130px] h-[50px]">
                   <input
+                    required
                     type="file"
                     name="photo"
                     id="customFile"
