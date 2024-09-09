@@ -3,6 +3,7 @@ import doctorImg from "../../assets/images/doctor-img02.png";
 import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from "./DoctorAbout";
 import Feedback from "./Feedback";
+import SidePanel from "./SidePanel";
 const DoctorDetails = () => {
   const [tab, setTab] = useState("about");
   return (
@@ -19,7 +20,7 @@ const DoctorDetails = () => {
                 />
               </figure>
               <div>
-                <span className="text-irisBlueColor bg-[#CCF0F3] px-6 py-1 lg:py-2 font-[700] font-semibold leading-4 lg:leading-7 text-[12px] lg:text-[16px] rounded">
+                <span className="text-irisBlueColor bg-[#CCF0F3] px-6 py-1 lg:py-2 font-semibold leading-4 lg:leading-7 text-[12px] lg:text-[16px] rounded">
                   Surgeon
                 </span>
                 <h3 className="text-headingColor text-[22px] leading-9 mt-3 font-bold">
@@ -70,6 +71,10 @@ const DoctorDetails = () => {
             </div>
             <div className="mt-[50px]">{tab == "about" && <DoctorAbout />}</div>
             <div className="mt-[50px]">{tab == "feedback" && <Feedback />}</div>
+          </div>
+
+          <div className="col-span-3 md:col-span-1">
+            <SidePanel />
           </div>
         </div>
       </div>

@@ -18,6 +18,7 @@ const Routers = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetails />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   );
 };

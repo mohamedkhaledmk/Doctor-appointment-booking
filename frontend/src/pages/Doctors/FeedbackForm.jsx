@@ -55,7 +55,7 @@ const FeedbackForm = () => {
           onChange={(e) => setFeedback(e.target.value)}
         ></textarea>
       </div>
-      <button type="button" className="btn" onClick={handleSubmit}>
+      <button type="submit" className="btn" onClick={handleSubmit}>
         Submit Feedback
       </button>
     </form>
