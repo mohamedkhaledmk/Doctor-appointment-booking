@@ -4,16 +4,13 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import authRouter from "./routes/authRouter";
+import authRouter from "./routes/authRouter.js";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
 // db connect
 const connectDB = async () => {
   try {
@@ -33,7 +30,10 @@ app.use(
   })
 );
 
-authRouter.use("/api/auth", authRouter);
+app.use("/api/auth", authRouter);
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 app.listen(port, () => {
   connectDB();
