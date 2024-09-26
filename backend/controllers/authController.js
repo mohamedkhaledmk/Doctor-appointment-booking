@@ -67,6 +67,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
+    console.log(password);
     const patient = await User.findOne({ email });
 
     const doctor = await Doctor.findOne({ email });
@@ -83,21 +84,18 @@ export const login = async (req, res) => {
         .status(404)
         .json({ success: false, message: "User not found.." });
     }
+    console.log(user);
 
-    const isPasswordMatch = await bcrypt.compare(
-      password,
-      process.env.JWT_SECRET_KEY
-    );
+    const isPasswordMatch = await bcrypt.compare(password, user.password);
     if (!isPasswordMatch) {
       return res
         .status(400)
         .json({ success: false, message: "Invalid Credintials" });
     }
 
-    const token = getToken(user);
+    const token = generateToken(user);
 
-    const { role, password, appointments, ...rest } = user._doc;
-
+    const { role, hashedPassword, appointments, ...rest } = user._doc;
     res.status(200).json({
       success: true,
       message: "User logged in successfully",
